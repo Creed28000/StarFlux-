@@ -1,116 +1,16 @@
 <!doctype html>
 <html lang="pt-br">
- <head><style type="text/css" id="dcoder_stylesheet">body {
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StarFlux</title>
+    <link rel="stylesheet" href="style.css">
+<style type="text/css" id="dcoder_stylesheet">body {
     font-family: Arial, sans-serif;
     background-color: #111;
     color: #fff;
     margin: 0;
     padding: 0;
-
-    background-color: #111; /* Cor de fundo escura */
-    color: #fff; /* Cor do texto em branco */
-    font-family: 'Arial', sans-serif; /* Definir uma fonte simples */
-}
-
-/* Banner */
-.banner {
-    position: relative;
-    height: 400px;
-    background-color: #000;
-    color: white;
-    overflow: hidden;
-    margin-top: 70px; /* Para não cobrir a barra de navegação */
-}
-
-.banner .banner-content {
-    position: absolute;
-    top: 50%;
-    left: 20px;
-    transform: translateY(-50%);
-    z-index: 10;
-}
-
-.banner .banner-content h1 {
-    font-size: 50px;
-    font-weight: bold;
-}
-
-.banner .banner-content p {
-    font-size: 18px;
-    width: 70%;
-    margin: 10px 0;
-}
-
-.banner .banner-content button {
-    background-color: #e50914;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    margin: 5px;
-    cursor: pointer;
-}
-
-.banner .banner-content button:hover {
-    background-color: #f40612;
-}
-
-.banner .banner-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.banner {
-    width: 100%;
-    height: 300px;
-    overflow: hidden;
-}
-
-.banner img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-h2 {
-    color: #ff6347; /* Cor para os títulos (tom de laranja avermelhado) */
-    text-align: center;
-}
-
-button {
-    background-color: #ff6347; /* Cor do fundo do botão */
-    color: white; /* Cor do texto no botão */
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #ff4500; /* Cor do botão quando o mouse passa em cima */
-}
-
-.movie-list, .series-list {
-    display: flex;
-    justify-content: space-around;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.movie, .series {
-    width: 30%;
-    text-align: center;
-}
-
-.movie img, .series img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-.banner img {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
 }
 
 header {
@@ -157,249 +57,28 @@ footer {
     text-align: center;
     padding: 20px;
     background-color: #222;
-}
-/* Carrossel */
-.carousel {
-    margin-top: 50px;
-    padding: 20px 0;
-}
-
-.carousel h2 {
-    color: white;
-    font-size: 24px;
-    margin-left: 20px;
-    font-weight: bold;
-}
-
-.carousel-container {
-    display: flex;
-    gap: 10px;
-    overflow-x: scroll;
-    padding: 10px 20px;
-}
-
-.carousel-item {
-    width: 200px;
-    height: 300px;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.carousel-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s;
-}
-
-.carousel-item:hover img {
-    transform: scale(1.05);
-}
-
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #111;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 100;
-}
-
-.header .nav ul {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-}
-
-.header .nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 600;
-    text-transform: uppercase;
-}
-
-.header .profile img {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .header .nav ul {
-        display: none; /* Ocultar links na versão mobile */
-    }
-
-    .carousel-container {
-        gap: 5px;
-    }
-
-    .carousel-item {
-        width: 150px;
-        height: 225px;
-    }
-
-    .banner .banner-content h1 {
-        font-size: 30px;
-    }
-
-    .banner .banner-content p {
-        font-size: 14px;
-        width: 80%;
-    }
 }</style></head>
- <body>
-  <section class="banner"> 
-   <img src="banner-image.jpg" alt="Banner StarFlux"> 
-  </section> 
-  <header class="header"> 
-   <div class="logo"> 
-    <img src="logo.png" alt="StarFlux Logo"> 
-   </div> 
-   <nav class="nav"> 
-    <ul> 
-     <li><a href="#">Início</a></li> 
-     <li><a href="#">Filmes</a></li> 
-     <li><a href="#">Séries</a></li> 
-     <li><a href="#">Animes</a></li> 
-     <li><a href="#">Desenhos</a></li> 
-     <li><a href="#">TV</a></li> 
-     <li><a href="#">Minha Lista</a></li> 
-    </ul> 
-   </nav> 
-   <div class="profile"> 
-    <img src="user-profile.jpg" alt="Perfil de Usuário"> 
-   </div> 
-  </header> 
-  <div class="category"> 
-   <h2>Filmes Populares</h2> 
-   <ul> 
-    <li><a href="#">Filme 1</a></li> 
-    <li><a href="#">Filme 2</a></li> 
-    <li><a href="#">Filme 3</a></li> 
-   </ul> 
-  </div> 
-  <section class="banner"> 
-   <div class="banner-content"> 
-    <h1>Filme em Destaque</h1> 
-    <p>Assista agora à nova temporada de sua série favorita!</p> <button>Assistir</button> <button>Adicionar à Lista</button> 
-   </div> 
-   <img src="banner-image.jpg" alt="Filme em Destaque" class="banner-img"> 
-  </section> 
-  <section id="popular-movies"> 
-   <h2>Filmes Populares</h2> 
-   <div class="movie-list"> 
-    <div class="movie"> 
-     <img src="imagem1.jpg" alt="Filme 1"> 
-     <h3>Filme 1</h3> 
-    </div> 
-    <div class="movie"> 
-     <img src="imagem2.jpg" alt="Filme 2"> 
-     <h3>Filme 2</h3> 
-    </div> 
-    <div class="movie"> 
-     <img src="imagem3.jpg" alt="Filme 3"> 
-     <h3>Filme 3</h3> 
-    </div> 
-   </div> 
-  </section> 
-  <section id="popular-series"> 
-   <h2>Séries Populares</h2> 
-   <div class="series-list"> 
-    <div class="series"> 
-     <img src="serie1.jpg" alt="Série 1"> 
-     <h3>Série 1</h3> 
-    </div> 
-    <div class="series"> 
-     <img src="serie2.jpg" alt="Série 2"> 
-     <h3>Série 2</h3> 
-    </div> 
-    <div class="series"> 
-     <img src="serie3.jpg" alt="Série 3"> 
-     <h3>Série 3</h3> 
-    </div> 
-   </div> 
-  </section> 
-  <input type="text" id="search" placeholder="Buscar por filme ou série..."> <button onclick="searchContent()">Buscar</button> 
-  <meta charset="UTF-8"> 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-  <title>StarFlux</title> 
-  <link rel="stylesheet" href="style.css"> 
-  <header> 
-   <div class="logo">
-    StarFlux
-   </div> 
-   <div class="search-bar"> 
-    <input type="text" id="search" placeholder="Pesquisar filmes, séries..."> 
-   </div> 
-   <div class="profile"> <a href="login.html" id="login-link">Login</a> 
-   </div> 
-  </header> 
-  <section class="banners"> 
-   <div class="banner" id="banner-1"> 
-    <img src="assets/banner1.jpg" alt="Banner 1"> 
-   </div> 
-  </section>
-  <footer> 
-   <p>© 2025 StarFlux</p> 
-  </footer> 
-  <script src="script.js"></script> 
-  <script src="script.js"></script>
- 
+<body>
+    <header>
+        <div class="logo">StarFlux</div>
+        <div class="search-bar">
+            <input type="text" id="search" placeholder="Pesquisar filmes, séries...">
+        </div>
+        <div class="profile">
+            <a href="login.html" id="login-link">Login</a>
+        </div>
+    </header>
+    <section class="banners">
+        <div class="banner" id="banner-1">
+            <img src="assets/banner1.jpg" alt="Banner 1">
+        </div>
+    </section>
+    <footer>
+        <p>© 2025 StarFlux</p>
+    </footer>
+    <script src="script.js"></script>
+
 <script type="text/javascript" id="dcoder_script">// Função JavaScript para carregar os filmes, séries e banners
 document.addEventListener('DOMContentLoaded', function() {
     console.log("StarFlux carregado!");
-});
-function searchContent() {
-    var query = document.getElementById("search").value;
-    alert("Você está buscando por: " + query);
-}const apiKey = 'f5560baac04caa71449cf1417399b488';
-const apiUrl = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=pt-BR&page=1`;
-
-async function fetchMovies() {
-    const response = await fetch(apiUrl);
-    const data = await response.json();
-    displayMovies(data.results);
-}
-
-function displayMovies(movies) {
-    const movieList = document.getElementById('popular-movies');
-    movieList.innerHTML = '';
-    movies.forEach(movie => {
-        const movieElement = document.createElement('div');
-        movieElement.classList.add('movie');
-        movieElement.innerHTML = `
-            <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}">
-            <h3>${movie.title}</h3>
-        `;
-        movieList.appendChild(movieElement);
-    });
-}
-
-fetchMovies();
-https://api.themoviedb.org/3/movie/poconst apiKey = 'Sua_Chave_API_TMDb';
-const apiUrl = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=pt-BR&page=1`;
-
-async function fetchMovies() {
-    const response = await fetch(apiUrl);
-    const data = await response.json();
-    displayMovies(data.results);
-}
-
-function displayMovies(movies) {
-    const carouselContainer = document.querySelector('.carousel-container');
-    movies.forEach(movie => {
-        const movieElement = document.createElement('div');
-        movieElement.classList.add('carousel-item');
-        movieElement.innerHTML = `
-            <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}">
-        `;
-        carouselContainer.appendChild(movieElement);
-    });
-}
-
-fetchMovies();pular?api_key=${apiKey}&language=pt-BR&page=1</script></body></html>
+});</script></body></html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil - StarFlux</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Cabeçalho -->
+    <header>
+      <h1>StarFlux</h1>
+    </header>
+
+    <!-- Seção de Perfil -->
+    <div class="perfil-container">
+      <div class="perfil-header">
+        <h2>Bem-vindo ao seu perfil, <span id="user-name">Usuário</span></h2>
+        <div class="perfil-actions">
+          <button id="editar-perfil" class="btn-perfil">Editar Perfil</button>
+          <button id="sair" class="btn-perfil">Sair</button>
+        </div>
+      </div>
+
+      <div class="perfil-info">
+        <div class="info-item">
+          <i class="fas fa-user"></i>
+          <span id="nome-completo">Nome Completo: João Silva</span>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-envelope"></i>
+          <span id="email">E-mail: joao.silva@email.com</span>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-birthday-cake"></i>
+          <span id="data-nascimento">Data de Nascimento: 01/01/1990</span>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-cogs"></i>
+          <span id="configuracoes">Configurações de Conta</span>
+        </div>
+      </div>
+
+      <!-- Histórico de Exibição -->
+      <section class="historico">
+        <h2>Histórico de Exibição</h2>
+        <div class="historico-list">
+          <div class="historico-item">
+            <img src="https://via.placeholder.com/100" alt="Filme">
+            <span>Filme 1</span>
+          </div>
+          <div class="historico-item">
+            <img src="https://via.placeholder.com/100" alt="Série">
+            <span>Série 1</span>
+          </div>
+          <div class="historico-item">
+            <img src="https://via.placeholder.com/100" alt="Anime">
+            <span>Anime 1</span>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Barra de navegação inferior -->
+    <nav class="nav-bottom">
+      <a href="index.html" class="nav-link">
+        <i class="fas fa-home"></i><span>Início</span>
+      </a>
+      <a href="filmes.html" class="nav-link">
+        <i class="fas fa-film"></i><span>Filmes</span>
+      </a>
+      <a href="series.html" class="nav-link">
+        <i class="fas fa-tv"></i><span>Séries</span>
+      </a>
+      <a href="animes.html" class="nav-link">
+        <i class="fas fa-gamepad"></i><span>Animes</span>
+      </a>
+      <a href="lista.html" class="nav-link">
+        <i class="fas fa-list"></i><span>Minha Lista</span>
+      </a>
+      <a href="perfil.html" class="nav-link">
+        <i class="fas fa-user"></i><span>Perfil</span>
+      </a>
+    </nav>
+
+<script>
+      // Simulando a exibição do nome do usuário e outros dados
+      document.addEventListener("DOMContentLoaded", () => {
+        const userLoggedIn = localStorage.getItem('userLoggedIn');
+
+        if (!userLoggedIn) {
+          window.location.href = "login.html"; // Redireciona para login caso o usuário não esteja autenticado
+        } else {
+          // Simulando dados do usuário (essas informações podem vir de um banco de dados ou da API)
+          document.getElementById('user-name').textContent = "João Silva";
+          document.getElementById('nome-completo').textContent = "Nome Completo: João Silva";
+          document.getElementById('email').textContent = "E-mail: joao.silva@email.com";
+          document.getElementById('data-nascimento').textContent = "Data de Nascimento: 01/01/1990";
+        }
+      });
+
+      // Função para sair
+      document.getElementById('sair').addEventListener('click', () => {
+        localStorage.removeItem('userLoggedIn');
+        window.location.href = "login.html"; // Redireciona para a tela de login
+      });
+</script>
+  </body>
+</html>

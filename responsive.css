@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StarFlux - Plataforma de Streaming</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">
+            <h1>StarFlux</h1>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Pesquise filmes, séries...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+    </header>
+
+    <!-- Painel de Categorias -->
+    <div class="categoria-panel">
+        <a href="filmes.html">Filmes</a>
+        <a href="series.html">Séries</a>
+        <a href="animes.html">Animes</a>
+        <a href="tv.html">TV ao Vivo</a>
+        <a href="lista.html">Minha Lista</a>
+    </div>
+
+    <!-- Categorias -->
+    <section id="filmes">
+        <h2>Filmes Populares</h2>
+        <div class="carrossel-container" id="filmes-populares"></div>
+    </section>
+
+    <section id="series">
+        <h2>Séries Populares</h2>
+        <div class="carrossel-container" id="series-populares"></div>
+    </section>
+
+    <section id="animes">
+        <h2>Animes Populares</h2>
+        <div class="carrossel-container" id="animes-populares"></div>
+    </section>
+
+    <section id="tv">
+        <h2>TV ao Vivo</h2>
+        <div class="carrossel-container" id="tv-populares"></div>
+    </section>
+
+    <!-- Barra de navegação inferior -->
+    <nav class="nav-bottom">
+        <a href="index.html" class="nav-link">
+            <i class="fas fa-home"></i><span>Início</span>
+        </a>
+        <a href="filmes.html" class="nav-link">
+            <i class="fas fa-film"></i><span>Filmes</span>
+        </a>
+        <a href="series.html" class="nav-link">
+            <i class="fas fa-tv"></i><span>Séries</span>
+        </a>
+        <a href="animes.html" class="nav-link">
+            <i class="fas fa-gamepad"></i><span>Animes</span>
+        </a>
+        <a href="lista.html" class="nav-link">
+            <i class="fas fa-list"></i><span>Minha Lista</span>
+        </a>
+        <a href="perfil.html" class="nav-link">
+            <i class="fas fa-user"></i><span>Perfil</span>
+        </a>
+    </nav>
+
+    <script src="js/filmes.js"></script>
+    <script src="js/series.js"></script>
+    <script src="js/animes.js"></script>
+    <script src="js/tv.js"></script>
+</body>
+</html>

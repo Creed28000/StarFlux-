@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Lista - StarFlux</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Cabeçalho -->
+    <header>
+      <h1>StarFlux</h1>
+    </header>
+
+    <!-- Barra de Pesquisa -->
+    <div class="search-bar">
+      <input type="text" placeholder="Pesquise filmes, séries...">
+      <button><i class="fas fa-search"></i></button>
+    </div>
+
+    <!-- Título da Página -->
+    <section class="minha-lista-header">
+      <h2>Minha Lista</h2>
+    </section>
+
+    <!-- Seção de Filmes/Séries/Animes na Lista -->
+    <section id="minha-lista">
+      <h3>Filmes e Séries</h3>
+      <div class="carrossel-container" id="lista-popular"></div>
+    </section>
+
+    <!-- Barra de navegação inferior -->
+    <nav class="nav-bottom">
+      <a href="index.html" class="nav-link">
+        <i class="fas fa-home"></i><span>Início</span>
+      </a>
+      <a href="filmes.html" class="nav-link">
+        <i class="fas fa-film"></i><span>Filmes</span>
+      </a>
+      <a href="series.html" class="nav-link">
+        <i class="fas fa-tv"></i><span>Séries</span>
+      </a>
+      <a href="animes.html" class="nav-link">
+        <i class="fas fa-gamepad"></i><span>Animes</span>
+      </a>
+      <a href="lista.html" class="nav-link active">
+        <i class="fas fa-list"></i><span>Minha Lista</span>
+      </a>
+      <a href="perfil.html" class="nav-link">
+        <i class="fas fa-user"></i><span>Perfil</span>
+      </a>
+    </nav>
+
+<script>
+      // Simulando a exibição de filmes, séries ou animes na lista
+      document.addEventListener("DOMContentLoaded", () => {
+        // Dados simulados para os itens da lista
+        const lista = [
+          { title: "Filme 1", imageUrl: "https://via.placeholder.com/200x300" },
+          { title: "Série 1", imageUrl: "https://via.placeholder.com/200x300" },
+          { title: "Anime 1", imageUrl: "https://via.placeholder.com/200x300" },
+          { title: "Filme 2", imageUrl: "https://via.placeholder.com/200x300" },
+          { title: "Série 2", imageUrl: "https://via.placeholder.com/200x300" },
+          { title: "Anime 2", imageUrl: "https://via.placeholder.com/200x300" }
+        ];
+
+        const container = document.getElementById('lista-popular');
+
+        lista.forEach(item => {
+          const div = document.createElement('div');
+          div.classList.add('carrossel-item');
+          div.innerHTML = `
+            <img src="${item.imageUrl}" alt="${item.title}">
+            <div class="carrossel-item-title">${item.title}</div>
+          `;
+          container.appendChild(div);
+        });
+      });
+</script>
+  </body>
+</html>
